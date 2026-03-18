@@ -8,8 +8,8 @@ import ErrorReporter from "../components/ErrorReporter";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Panda - SaaS App Builder Starter",
-  description: "Production-ready SaaS app builder starter template with modern UI, dark mode, and launch-ready sections.",
+  title: "TalentSync - Recruitment CRM SaaS",
+  description: "TalentSync helps recruitment agencies manage candidates, clients, job orders and placements in one modern CRM platform.",
 };
 
 export default function RootLayout({
@@ -24,23 +24,12 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable} font-sans`}
     >
       <head>
-        {/*
-          PANDA ELEMENT SELECTION SCRIPT
-          ===============================
-          Captures all element clicks inside the iframe and sends metadata to Bubble via postMessage.
-          Metadata captured: url, width, height, alt
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        */}
+        {/* PANDA ELEMENT SELECTION SCRIPT */}
         <Script
           src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js"
           strategy="afterInteractive"
         />
-        {/*
-          PANDA BRANDING SCRIPT
-          ====================
-          Handles Panda-specific branding, logos, placeholders, and runtime injection for the iframe/editor.
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        */}
+        {/* PANDA BRANDING SCRIPT */}
         <Script
           src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js"
           strategy="afterInteractive"

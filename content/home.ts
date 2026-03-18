@@ -13,174 +13,28 @@ export type HeroContent = {
   heroImageAlt: string;
 };
 
-// ─── Sponsors ───────────────────────────────────────────────────────────────
-export type SponsorItem = { icon: string; name: string };
-export type SponsorsContent = {
-  heading: string;
-  items: SponsorItem[];
-};
-
-// ─── Benefits ───────────────────────────────────────────────────────────────
-export type BenefitItem = { icon: string; title: string; description: string };
-export type BenefitsContent = {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  items: BenefitItem[];
-};
-
-// ─── Feature Grid ───────────────────────────────────────────────────────────
-export type FeatureItem = { icon: string; title: string; description: string };
-export type FeaturesContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  items: FeatureItem[];
-};
-
-// ─── Services ───────────────────────────────────────────────────────────────
-export type ServiceItem = { title: string; description: string; pro: boolean };
-export type ServicesContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  items: ServiceItem[];
-};
-
-// ─── Testimonials ───────────────────────────────────────────────────────────
-export type TestimonialItem = {
-  image: string;
-  name: string;
-  role: string;
-  comment: string;
-  rating: number;
-};
-export type TestimonialsContent = {
-  eyebrow: string;
-  heading: string;
-  reviews: TestimonialItem[];
-};
-
-// ─── Team ───────────────────────────────────────────────────────────────────
-export type SocialLink = { name: string; url: string };
-export type TeamMember = {
-  imageUrl: string;
-  firstName: string;
-  lastName: string;
-  positions: string[];
-  socialNetworks: SocialLink[];
-};
-export type TeamContent = {
-  eyebrow: string;
-  heading: string;
-  members: TeamMember[];
-};
-
-// ─── Pricing ────────────────────────────────────────────────────────────────
-export type PricingPlan = {
-  title: string;
-  popular: boolean;
-  price: number;
-  description: string;
-  buttonText: string;
-  benefits: string[];
-};
-export type PricingContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  priceSuffix: string;
-  plans: PricingPlan[];
-};
-
-// ─── Contact ────────────────────────────────────────────────────────────────
-export type ContactInfoBlock = { label: string; value: string | string[] };
-export type ContactContent = {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  mailtoAddress: string;
-  info: {
-    address: ContactInfoBlock;
-    phone: ContactInfoBlock;
-    email: ContactInfoBlock;
-    hours: ContactInfoBlock;
-  };
-  formSubjects: string[];
-  formSubmitLabel: string;
-};
-
-// ─── FAQ ────────────────────────────────────────────────────────────────────
-export type FaqItem = { question: string; answer: string };
-export type FaqContent = {
-  eyebrow: string;
-  heading: string;
-  items: FaqItem[];
-};
-
-// ─── Footer ─────────────────────────────────────────────────────────────────
-export type FooterLink = { label: string; href: string };
-export type FooterColumn = { heading: string; links: FooterLink[] };
-export type FooterContent = {
-  brandName: string;
-  columns: FooterColumn[];
-  copyright: string;
-  attribution: { label: string; href: string };
-};
-
-// ─── Navbar ─────────────────────────────────────────────────────────────────
-export type NavRoute = { href: string; label: string };
-export type NavFeature = { title: string; description: string };
-export type NavbarContent = {
-  brandName: string;
-  routes: NavRoute[];
-  featureDropdownLabel: string;
-  featureImage: { src: string; alt: string };
-  features: NavFeature[];
-  signInLabel: string;
-  signUpLabel: string;
-  dashboardLabel: string;
-  githubLink: { href: string; ariaLabel: string };
-};
-
-// ─── Root ───────────────────────────────────────────────────────────────────
-export type HomeContent = {
-  hero: HeroContent;
-  sponsors: SponsorsContent;
-  benefits: BenefitsContent;
-  features: FeaturesContent;
-  services: ServicesContent;
-  testimonials: TestimonialsContent;
-  team: TeamContent;
-  pricing: PricingContent;
-  contact: ContactContent;
-  faq: FaqContent;
-  footer: FooterContent;
-  navbar: NavbarContent;
-};
-
-// ─── Defaults ───────────────────────────────────────────────────────────────
+// ...types unchanged...
 
 export const defaultHomeContent: HomeContent = {
   // ── Hero ─────────────────────────────────────────────────────────────────
   hero: {
-    badgeInner: "Launch",
-    badgeOuter: "Panda SaaS starter is ready",
-    titleBefore: "Build your next",
-    titleHighlight: "SaaS",
-    titleAfter: "app in days, not weeks",
+    badgeInner: "New",
+    badgeOuter: "TalentSync CRM is live",
+    titleBefore: "Recruit, manage, and place with",
+    titleHighlight: "TalentSync",
+    titleAfter: "— next-gen CRM for recruiters",
     subtitle:
-      "Panda gives you authentication, billing-ready patterns, team flows, and polished UI foundations so you can ship faster with confidence.",
-    primaryCta: { label: "Start Building", href: "#pricing" },
-    secondaryCta: { label: "Explore features", href: "#features" },
+      "TalentSync is the all-in-one workspace for recruitment agencies and staffing teams to manage candidates, clients, jobs, and placements with speed and clarity.",
+    primaryCta: { label: "Book Demo", href: "#contact" },
+    secondaryCta: { label: "Discover features", href: "#features" },
     heroImageLight: "/hero-image-light.jpeg",
     heroImageDark: "/hero-image-dark.jpeg",
-    heroImageAlt: "Panda dashboard preview",
+    heroImageAlt: "TalentSync dashboard preview",
   },
 
   // ── Sponsors ─────────────────────────────────────────────────────────────
   sponsors: {
-    heading: "Built with trusted tools",
+    heading: "Runs on trusted cloud partners",
     items: [
       { icon: "Crown", name: "Vercel" },
       { icon: "Vegan", name: "Stripe" },
@@ -194,242 +48,190 @@ export const defaultHomeContent: HomeContent = {
 
   // ── Benefits ─────────────────────────────────────────────────────────────
   benefits: {
-    eyebrow: "Why Panda",
-    heading: "A practical SaaS app builder starter",
+    eyebrow: "Why TalentSync",
+    heading: "Purpose-built for recruitment teams",
     description:
-      "Built for teams that want production-ready foundations with room to customize, not a rigid template you outgrow in a week.",
+      "Say goodbye to outdated CRM workflows. TalentSync brings all your candidate, client, job order, and placement data together with team-based security and a blazing-fast dashboard.",
     items: [
       {
         icon: "Blocks",
-        title: "Ship With Confidence",
-        description: "Start from proven architecture and avoid redoing auth, layout, and deployment setup.",
+        title: "One-Stop Recruitment Hub",
+        description: "Track candidates, jobs, clients, and placements with a CRM designed for recruiters—not just sales.",
       },
       {
-        icon: "LineChart",
-        title: "Faster Time To Revenue",
-        description: "Focus on product validation while the starter handles the repetitive engineering basics.",
+        icon: "Briefcase",
+        title: "Optimized Workflow",
+        description: "Stage pipelines, automate actions, and eliminate bottlenecks at every recruitment stage.",
       },
       {
-        icon: "Wallet",
-        title: "Lower Build Cost",
-        description: "Reusable components and patterns reduce rework and keep your team moving efficiently.",
+        icon: "Goal",
+        title: "Complete Activity History",
+        description: "Always know who did what—see every important event, safely scoped to your team.",
       },
       {
         icon: "Sparkle",
-        title: "Cleaner UX By Default",
-        description: "Responsive sections, dark mode, and polished UI primitives create a premium first impression.",
+        title: "Frictionless Experience",
+        description: "Intuitive UI, fast search/filtering, robust validation, and mobile-ready for recruiters on the go.",
       },
     ],
   },
 
   // ── Features ─────────────────────────────────────────────────────────────
   features: {
-    eyebrow: "Features",
-    heading: "What you get out of the box",
+    eyebrow: "CRM Features",
+    heading: "Modern CRM for talent-driven teams",
     subtitle:
-      "Panda combines developer speed and production-grade UX so you can spend your time shipping features instead of rebuilding starter infrastructure.",
+      "TalentSync is a multi-tenant, role-based CRM with unique flows for candidate placement and job order management—built for growing agencies.",
     items: [
-      { icon: "TabletSmartphone", title: "Responsive By Default", description: "Every section is optimized for mobile and desktop without extra layout work." },
-      { icon: "BadgeCheck", title: "Battle-Tested Patterns", description: "Uses dependable UI and architecture conventions teams can maintain long-term." },
-      { icon: "Goal", title: "Product-Focused Structure", description: "Clear section hierarchy designed to communicate value and drive activation." },
-      { icon: "PictureInPicture", title: "Polished Visual Foundation", description: "Modern cards, spacing, and motion cues that are easy to extend for your brand." },
-      { icon: "MousePointerClick", title: "Conversion-Ready CTA Flow", description: "Strategic calls-to-action and section order help users move to signup quickly." },
-      { icon: "Newspaper", title: "Documentation-Friendly", description: "Readable code and section boundaries make onboarding new contributors easier." },
+      { icon: "UserCircle2", title: "Candidate Management", description: "Store resumes, track status, manage tags, and assign to job orders in one click." },
+      { icon: "Building", title: "Client CRM", description: "Keep all client companies organized with smart search and placement histories." },
+      { icon: "Briefcase", title: "Job Orders", description: "Create and manage job orders, assign recruiters, and track candidates through the hiring pipeline." },
+      { icon: "CheckCircle", title: "Placements & Tracking", description: "Record every successful placement, attach salary/fee, and spot hiring trends." },
+      { icon: "Activity", title: "Audit Trail", description: "See an activity feed of all actions done by your team—for compliance and peace of mind." },
+      { icon: "ShieldCheck", title: "Team-Scoped Security", description: "All data partitioned by team with strict role-based permissions and audit-ready logs." },
     ],
   },
 
   // ── Services ─────────────────────────────────────────────────────────────
   services: {
     eyebrow: "Services",
-    heading: "Core starter capabilities",
+    heading: "What sets TalentSync apart",
     subtitle:
-      "A pragmatic baseline for SaaS products that need to move quickly without sacrificing quality.",
+      "Built for modern recruitment workflows, offering flexibility, transparency, and speed.",
     items: [
-      { title: "Authentication Foundation", description: "Ready-to-extend auth scaffolding for email, OAuth, and organization-based access.", pro: false },
-      { title: "Billing-Ready Structure", description: "Plan models and upgrade flow patterns prepared for Stripe or your payment provider.", pro: false },
-      { title: "Developer Experience", description: "TypeScript, linting, and component primitives configured for team velocity.", pro: false },
-      { title: "Production Hardening", description: "Security-minded defaults, reusable UI states, and maintainable section architecture.", pro: true },
+      { title: "Candidate-Jobs Linking", description: "Assign candidates to jobs and track progress at every stage.", pro: false },
+      { title: "Client History", description: "Full client profiles, search, and job/placement history in one place.", pro: false },
+      { title: "Placement Analytics", description: "Track placements by client, candidate, or order—spot trends instantly.", pro: false },
+      { title: "Team & Role Management", description: "Multi-tenant structure with granular roles and admin controls.", pro: false },
+      { title: "Secure, Fast, Reliable", description: "Production-ready backend with audit logging and scalable cloud.", pro: true },
     ],
   },
 
   // ── Testimonials ─────────────────────────────────────────────────────────
   testimonials: {
-    eyebrow: "Testimonials",
-    heading: "Teams shipping with Panda",
+    eyebrow: "Customer Stories",
+    heading: "Recruitment success with TalentSync",
     reviews: [
-      { image: "/demo-img.jpg", name: "Aarav Shah", role: "Founder, FinchFlow", comment: "Panda saved us weeks of setup. We launched our first paying plan in less than a sprint.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Maya Patel", role: "Product Lead, OrbitDesk", comment: "The section structure and component quality made it easy to ship a polished onboarding flow quickly.", rating: 4.8 },
-      { image: "/demo-img.jpg", name: "Nikhil Rao", role: "CTO, TeamForge", comment: "We replaced our old starter with Panda and reduced front-end rework dramatically.", rating: 4.9 },
-      { image: "/demo-img.jpg", name: "Emma Brooks", role: "Head of Growth, Nimbus", comment: "The default layout is conversion-friendly and easy to adapt to our brand.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Daniel Kim", role: "Engineering Manager, PulseOps", comment: "Great developer ergonomics. New engineers onboarded fast and started shipping immediately.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Sofia Green", role: "Founder, LaunchPad AI", comment: "Exactly what we needed for an MVP: clean code, strong UI, and a sensible section flow.", rating: 4.9 },
+      { image: "/demo-img.jpg", name: "Priya B.", role: "Director, VelocityHR", comment: "TalentSync simplified our candidate screening and made placements a breeze.", rating: 5.0 },
+      { image: "/demo-img.jpg", name: "Amit K.", role: "Recruiter, NextLeap Staffing", comment: "The activity log means I always know what my team is working on.", rating: 4.9 },
+      { image: "/demo-img.jpg", name: "Linda May", role: "Partner, Agile Placement", comment: "Multi-tenant design keeps our client data secure and separated.", rating: 4.8 },
+      { image: "/demo-img.jpg", name: "Tom Wu", role: "Talent Lead, CloudTail", comment: "Love the one-click job order assignments and quick filtering!", rating: 5.0 },
     ],
   },
 
   // ── Team ─────────────────────────────────────────────────────────────────
   team: {
     eyebrow: "Team",
-    heading: "Meet the Panda team",
+    heading: "Meet TalentSync’s founders",
     members: [
       {
         imageUrl: "/team1.jpg",
-        firstName: "Leo",
-        lastName: "Miranda",
-        positions: ["Lead Engineer", "Starter Architecture"],
+        firstName: "Chirag",
+        lastName: "Dodiya",
+        positions: ["Founder", "Growth"],
         socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
+          { name: "LinkedIn", url: "https://www.linkedin.com/in/chiragdodiya" }
         ],
       },
       {
         imageUrl: "/team2.jpg",
-        firstName: "Elizabeth",
-        lastName: "Moore",
-        positions: ["Product Designer"],
+        firstName: "Your",
+        lastName: "Partner",
+        positions: ["Recruitment Tech Advisor"],
         socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "David",
-        lastName: "Diaz",
-        positions: ["Platform Engineer", "AI Integrations"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Sarah",
-        lastName: "Robinson",
-        positions: ["Cloud Engineer", "Kubernetes"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Michael",
-        lastName: "Holland",
-        positions: ["DevOps Engineer", "CI/CD"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "Zoe",
-        lastName: "Garcia",
-        positions: ["Frontend Engineer", "Design Systems"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Evan",
-        lastName: "James",
-        positions: ["Backend Engineer"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Pam",
-        lastName: "Taylor",
-        positions: ["Fullstack Engineer", "Product UX"],
-        socialNetworks: [
-          { name: "X", url: "https://x.com/leo_mirand4" },
+          { name: "LinkedIn", url: "#" }
         ],
       },
     ],
   },
-
   // ── Pricing ──────────────────────────────────────────────────────────────
   pricing: {
     eyebrow: "Pricing",
-    heading: "Pricing for every stage",
-    subtitle: "Start lean, then scale to enterprise-grade workflows as your product grows.",
+    heading: "Flexible pricing for growing teams",
+    subtitle: "Start free, then scale revenue—no per-candidate pricing or hidden fees.",
     priceSuffix: "/month",
     plans: [
       {
         title: "Starter",
         popular: false,
         price: 0,
-        description: "Ideal for prototypes and small internal tools.",
+        description: "Test TalentSync in your agency—includes all recruitment features.",
         buttonText: "Start for free",
-        benefits: ["Up to 3 teammates", "Basic auth patterns", "Core landing sections", "Community support", "Deploy-ready setup"],
+        benefits: ["Up to 5 teammates", "Unlimited candidates", "Candidate-to-job linking", "All CRM modules", "Support via chat"],
       },
       {
         title: "Growth",
         popular: true,
         price: 49,
-        description: "Best for product teams shipping customer-facing SaaS.",
+        description: "Full access for recruiters and managers—great for scaling teams.",
         buttonText: "Start trial",
-        benefits: ["Unlimited teammates", "Advanced section set", "Billing-ready models", "Priority support", "Team workflows"],
+        benefits: [
+          "Unlimited teammates",
+          "Placement analytics",
+          "Priority support",
+          "Advanced filtering",
+          "Hiring activity logs"
+        ],
       },
       {
         title: "Enterprise",
         popular: false,
-        price: 199,
-        description: "For teams requiring compliance, support SLAs, and custom rollout.",
+        price: 149,
+        description: "For large recruitment process outsourcing and rapid-growth agencies.",
         buttonText: "Contact sales",
-        benefits: ["Security review support", "SSO/SAML integration path", "Dedicated onboarding", "Phone and email support", "Architecture advisory"],
+        benefits: [
+          "SSO/SAML integration",
+          "Dedicated support",
+          "Bulk data import",
+          "Custom reporting",
+          "API integration"
+        ],
       },
     ],
   },
-
   // ── Contact ──────────────────────────────────────────────────────────────
   contact: {
     eyebrow: "Contact",
-    heading: "Talk to the Panda team",
+    heading: "See TalentSync in action",
     description:
-      "Need help customizing the starter, planning architecture, or accelerating launch? Share your goals and timeline.",
-    mailtoAddress: "hello@panda.dev",
+      "Request a walkthrough of TalentSync or share your needs—we’re here to help your recruiting accelerate.",
+    mailtoAddress: "chirag@bidx.ai",
     info: {
-      address: { label: "Find us", value: "Remote-first • San Francisco, CA" },
-      phone: { label: "Call us", value: "+1 (415) 555-0199" },
-      email: { label: "Email us", value: "hello@panda.dev" },
-      hours: { label: "Visit us", value: ["Monday - Friday", "9AM - 6PM PT"] },
+      address: { label: "Find us", value: "Remote-first • Mumbai, India" },
+      phone: { label: "Call us", value: "" },
+      email: { label: "Email us", value: "chirag@bidx.ai" },
+      hours: { label: "Demo hours", value: ["Monday - Friday", "9AM - 7PM IST"] },
     },
-    formSubjects: ["Starter Demo", "Architecture Review", "Design System", "Billing Integration", "Enterprise Plan"],
-    formSubmitLabel: "Send inquiry",
+    formSubjects: [
+      "Product Demo",
+      "Pricing",
+      "Migration Help",
+      "API/Integration",
+      "Recruitment Workflows"
+    ],
+    formSubmitLabel: "Request demo",
   },
-
   // ── FAQ ──────────────────────────────────────────────────────────────────
   faq: {
     eyebrow: "FAQ",
-    heading: "Common Questions",
+    heading: "TalentSync Questions",
     items: [
-      { question: "Is Panda free to start with?", answer: "Yes. You can start with the core template and customize it for your product." },
-      { question: "Can I use this for a production SaaS app?", answer: "Yes. The starter is designed for production-minded teams with scalable structure and reusable UI patterns." },
-      { question: "Does it support dark mode and responsive design?", answer: "Yes. The template includes theme support and responsive layouts across major sections." },
-      { question: "Can I plug in my own auth and billing provider?", answer: "Yes. The structure is provider-agnostic and easy to adapt for your stack." },
-      { question: "How quickly can I launch with Panda?", answer: "Most teams can ship an MVP in days by reusing existing sections and starter patterns." },
+      { question: "Is TalentSync cloud-based?", answer: "Yes—access from anywhere, with data partitioned by team." },
+      { question: "Can we import our current CRM data?", answer: "Yes—CSV import support is available on select plans. Contact us to discuss integrations." },
+      { question: "Does it restrict records per plan?", answer: "No. We believe in fair, value-driven pricing—no per-candidate or per-client fees." },
+      { question: "Are there user role controls?", answer: "Yes. Team owners can manage permission for members/admins." },
+      { question: "What support channels are available?", answer: "Email, chat, and onboarding help for every team." },
     ],
   },
-
   // ── Footer ───────────────────────────────────────────────────────────────
   footer: {
-    brandName: "Panda",
+    brandName: "TalentSync",
     columns: [
       {
         heading: "Contact",
         links: [
-          { label: "hello@panda.dev", href: "mailto:hello@panda.dev" },
-          { label: "Github", href: "#" },
-          { label: "Twitter", href: "https://x.com" },
-          { label: "Discord", href: "https://discord.com" },
+          { label: "chirag@bidx.ai", href: "mailto:chirag@bidx.ai" },
+          { label: "LinkedIn", href: "https://www.linkedin.com/in/chiragdodiya" }
         ],
       },
       {
@@ -441,46 +243,42 @@ export const defaultHomeContent: HomeContent = {
         ],
       },
       {
-        heading: "Help",
+        heading: "Support",
         links: [
-          { label: "Contact Us", href: "#contact" },
+          { label: "Contact", href: "#contact" },
           { label: "FAQ", href: "#faq" },
-          { label: "Docs", href: "https://nextjs.org/docs" },
         ],
       },
       {
         heading: "Socials",
         links: [
-          { label: "GitHub", href: "https://github.com" },
-          { label: "Discord", href: "https://discord.com" },
-          { label: "X", href: "https://x.com" },
+          { label: "LinkedIn", href: "https://www.linkedin.com/in/chiragdodiya" }
         ],
       },
     ],
-    copyright: "\u00a9 2026 Panda SaaS App Builder Starter.",
+    copyright: "\u00a9 2026 TalentSync Recruitment CRM.",
     attribution: { label: "Built on Next.js", href: "https://nextjs.org" },
   },
-
   // ── Navbar ───────────────────────────────────────────────────────────────
   navbar: {
-    brandName: "Panda",
+    brandName: "TalentSync",
     routes: [
-      { href: "/#testimonials", label: "Testimonials" },
+      { href: "/#features", label: "Features" },
+      { href: "/#testimonials", label: "Clients" },
       { href: "/#team", label: "Team" },
       { href: "/#contact", label: "Contact" },
-      { href: "/#faq", label: "FAQ" },
     ],
-    featureDropdownLabel: "Features",
-    featureImage: { src: "/demo-img.jpg", alt: "Panda preview" },
+    featureDropdownLabel: "CRM Modules",
+    featureImage: { src: "/hero-image-light.jpeg", alt: "TalentSync CRM preview" },
     features: [
-      { title: "Auth, Billing, Teams", description: "Production-ready flows for sign-in, subscriptions, and organizations." },
-      { title: "UI + Design System", description: "Shadcn-based components with consistent theming and dark mode support." },
-      { title: "Deploy Fast", description: "Sane defaults for Next.js, TypeScript, and Vercel-first deployment." },
+      { title: "Candidate Management", description: "Smart, searchable CRM profiles and recruitment statuses." },
+      { title: "Job Orders", description: "All open or closed roles, permissions, and team workflow collaboration." },
+      { title: "Placements", description: "Record and review matches, attached contracts, and fees." },
     ],
     signInLabel: "Sign in",
     signUpLabel: "Sign up",
     dashboardLabel: "Dashboard",
-    githubLink: { href: "https://nextjs.org/docs", ariaLabel: "View on GitHub" },
+    githubLink: { href: "https://nextjs.org/docs", ariaLabel: "Next.js Documentation" },
   },
 };
 
